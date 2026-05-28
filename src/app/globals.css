@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-dark-navy: #0a0f1e;
+  --color-deepest: #050810;
+  --color-yellow: #ffd700;
+  --color-orange: #f97316;
+  --color-red: #ef4444;
+  --color-white: #ffffff;
+  --color-section-grey: #f8f9fa;
+  --color-charcoal: #1a1a1a;
+  --color-muted: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-charcoal);
+  background: var(--color-white);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.icon-filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+@keyframes pulse-bolt {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@layer components {
+  .pulsing-bolt {
+    animation: pulse-bolt 1.8s ease-in-out infinite;
+  }
+
+  .sticky-nav-active {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .underline-accent-left {
+    position: relative;
+    padding-bottom: 16px;
+  }
+  .underline-accent-left::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-yellow);
+    border-radius: 2px;
+  }
+
+  .underline-accent-center {
+    position: relative;
+    padding-bottom: 16px;
+  }
+  .underline-accent-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-yellow);
+    border-radius: 2px;
+  }
+
+  .service-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    border-left: 3px solid transparent;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    border-left-color: var(--color-yellow);
+  }
+
+  .testimonial-card {
+    border-left: 3px solid var(--color-yellow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .compliance-badge {
+    border: 2px solid var(--color-yellow);
+    border-radius: 8px;
+    padding: 20px 28px;
+    text-align: center;
+    min-width: 200px;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-yellow) !important;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+  }
+  .form-input.error {
+    border-color: var(--color-red) !important;
+  }
+
+  .btn-primary {
+    background: var(--color-orange);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: background 0.2s ease, transform 0.1s ease;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #e66a14; }
+  .btn-primary:active { transform: scale(0.97); }
+
+  .btn-secondary {
+    border: 2px solid var(--color-yellow);
+    color: var(--color-yellow);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+    display: inline-block;
+  }
+  .btn-secondary:hover {
+    background: var(--color-yellow);
+    color: var(--color-dark-navy);
+  }
+
+  .img-placeholder {
+    background: var(--color-dark-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .why-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(255, 215, 0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+
+  .hero-pattern {
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.04) 0%, transparent 40%);
+  }
+
+  .years-badge {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--color-yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .footer-divider {
+    border-color: rgba(255, 215, 0, 0.15);
+  }
+
+  .section-title {
+    margin-bottom: 48px;
+  }
+
+  .worker-svg {
+    opacity: 0.85;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 32px !important;
+    line-height: 1.2;
+  }
+}
