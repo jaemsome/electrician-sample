@@ -50,6 +50,7 @@ export default function AboutSection() {
                 <span
                   className="material-symbols-outlined icon-filled"
                   style={{ color: 'var(--color-yellow)' }}
+                  aria-hidden="true"
                 >
                   check_circle
                 </span>

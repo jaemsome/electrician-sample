@@ -10,6 +10,7 @@ function ComplianceBadge({ icon, label, value }) {
       <span
         className="material-symbols-outlined icon-filled text-2xl mb-2 block"
         style={{ color: 'var(--color-yellow)' }}
+        aria-hidden="true"
       >
         {icon}
       </span>
