@@ -40,7 +40,7 @@ export default function HeroSection() {
               href="tel:0291234567"
               className="btn-secondary px-8 py-4 text-sm text-center flex items-center justify-center gap-2"
             >
-              <span className="material-symbols-outlined text-base">call</span>
+              <span className="material-symbols-outlined text-base" aria-hidden="true">call</span>
               Call Us Now
             </a>
           </div>
@@ -54,6 +54,7 @@ export default function HeroSection() {
                 <span
                   className="material-symbols-outlined icon-filled text-lg"
                   style={{ color: 'var(--color-yellow)' }}
+                  aria-hidden="true"
                 >
                   {icon}
                 </span>

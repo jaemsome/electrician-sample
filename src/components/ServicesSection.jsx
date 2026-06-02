@@ -49,6 +49,7 @@ function ServiceCard({ icon, iconColor, title, description }) {
       <span
         className="material-symbols-outlined icon-filled text-4xl mb-4 block"
         style={{ color: iconColor }}
+        aria-hidden="true"
       >
         {icon}
       </span>

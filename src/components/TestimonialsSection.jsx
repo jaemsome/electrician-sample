@@ -16,14 +16,15 @@ const testimonials = [
   },
 ];
 
-function StarRating({ count = 5, size = 'text-lg' }) {
+function StarRating({ count = 5, size = 'text-lg', label }) {
   return (
-    <div className="flex gap-1">
+    <div className="flex gap-1" role="img" aria-label={label ?? `${count} out of 5 stars`}>
       {Array.from({ length: count }).map((_, i) => (
         <span
           key={i}
           className={`material-symbols-outlined icon-filled ${size}`}
           style={{ color: 'var(--color-yellow)' }}
+          aria-hidden="true"
         >
           star
         </span>
@@ -60,7 +61,7 @@ export default function TestimonialsSection() {
           ))}
         </div>
         <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
-          <StarRating size="text-2xl" />
+          <StarRating size="text-2xl" label="Overall rating: 4.9 out of 5 stars" />
           <span className="text-xl font-black">4.9 / 5</span>
           <span className="text-sm" style={{ color: 'var(--color-muted)' }}>
             Based on 147 Google Reviews

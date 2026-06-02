@@ -59,7 +59,7 @@ export default function Navbar() {
             </a>
           ))}
           <a href="tel:0291234567" className="btn-primary px-6 py-3 text-sm flex items-center gap-2">
-            <span className="material-symbols-outlined text-base">call</span>
+            <span className="material-symbols-outlined text-base" aria-hidden="true">call</span>
             (02) 9123 4567
           </a>
         </nav>
@@ -68,8 +68,9 @@ export default function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-gray-700 p-2"
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
-          <span className="material-symbols-outlined text-3xl">
+          <span className="material-symbols-outlined text-3xl" aria-hidden="true">
             {menuOpen ? 'close' : 'menu'}
           </span>
         </button>
