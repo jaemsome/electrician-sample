@@ -28,6 +28,7 @@ function WhyCard({ icon, title, description }) {
         <span
           className="material-symbols-outlined icon-filled text-3xl"
           style={{ color: 'var(--color-yellow)' }}
+          aria-hidden="true"
         >
           {icon}
         </span>
