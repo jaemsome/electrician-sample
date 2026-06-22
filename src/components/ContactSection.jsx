@@ -72,42 +72,53 @@ export default function ContactSection() {
   const baseStyle = { background: 'rgba(255,255,255,0.06)', borderColor: 'rgba(255,255,255,0.12)' };
 
   return (
-    <section id="contact" className="py-20 px-4 md:px-8" style={{ background: 'var(--color-dark-navy)' }}>
-      <div className="max-w-container mx-auto grid md:grid-cols-2 gap-12">
+    <section id="contact" className="relative py-20 px-4 md:px-8 overflow-hidden" style={{ background: 'var(--color-dark-navy)' }}>
+      <div className="mesh-bg" aria-hidden="true" />
+      <div className="max-w-container mx-auto grid md:grid-cols-2 gap-12 relative">
 
         <div>
-          <h2 className="text-3xl font-black text-white underline-accent-left mb-8">Get a Free Quote</h2>
-          <div className="flex flex-col gap-8">
+          <h2 className="text-3xl font-bold font-heading text-white underline-accent-left mb-8">Get a Free Quote</h2>
+          <div className="flex flex-col gap-6">
             <div className="flex items-start gap-4">
-              <span className="material-symbols-outlined mt-1" style={{ color: 'var(--color-yellow)' }} aria-hidden="true">call</span>
+              <div className="icon-orb" style={{ width: 48, height: 48 }}>
+                <span className="material-symbols-outlined text-xl" style={{ color: 'var(--color-yellow)' }} aria-hidden="true">call</span>
+              </div>
               <div>
                 <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-muted)' }}>Call Us 24/7</div>
-                <a href="tel:0291234567" className="text-2xl font-black hover:opacity-80 transition-opacity" style={{ color: 'var(--color-yellow)' }}>(02) 9123 4567</a>
+                <a href="tel:0291234567" className="text-2xl font-bold font-heading hover:opacity-80 transition-opacity" style={{ color: 'var(--color-yellow)' }}>(02) 9123 4567</a>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="material-symbols-outlined mt-1" style={{ color: 'var(--color-yellow)' }} aria-hidden="true">mail</span>
+              <div className="icon-orb" style={{ width: 48, height: 48 }}>
+                <span className="material-symbols-outlined text-xl" style={{ color: 'var(--color-yellow)' }} aria-hidden="true">mail</span>
+              </div>
               <div>
                 <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-muted)' }}>Email Us</div>
                 <a href="mailto:info@voltelectrics.com.au" className="text-base font-semibold text-white hover:opacity-80 transition-opacity">info@voltelectrics.com.au</a>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="material-symbols-outlined mt-1" style={{ color: 'var(--color-yellow)' }} aria-hidden="true">shield</span>
+              <div className="icon-orb" style={{ width: 48, height: 48 }}>
+                <span className="material-symbols-outlined text-xl" style={{ color: 'var(--color-yellow)' }} aria-hidden="true">shield</span>
+              </div>
               <div>
                 <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-muted)' }}>Licence Number</div>
                 <span className="text-base font-semibold text-white">#EL78234C — NSW Licensed Electrician</span>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="material-symbols-outlined mt-1" style={{ color: 'var(--color-yellow)' }} aria-hidden="true">location_on</span>
+              <div className="icon-orb" style={{ width: 48, height: 48 }}>
+                <span className="material-symbols-outlined text-xl" style={{ color: 'var(--color-yellow)' }} aria-hidden="true">location_on</span>
+              </div>
               <div>
                 <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-muted)' }}>Service Areas</div>
                 <p className="text-sm text-white leading-relaxed">Parramatta · Northmead · Harris Park · Granville · Merrylands · Westmead · Wentworthville · Toongabbie &amp; surrounds</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <span className="material-symbols-outlined mt-1" style={{ color: 'var(--color-yellow)' }} aria-hidden="true">schedule</span>
+              <div className="icon-orb" style={{ width: 48, height: 48 }}>
+                <span className="material-symbols-outlined text-xl" style={{ color: 'var(--color-yellow)' }} aria-hidden="true">schedule</span>
+              </div>
               <div>
                 <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--color-muted)' }}>Business Hours</div>
                 <p className="text-sm text-white">Mon – Fri: 7:00am – 6:00pm</p>
@@ -119,7 +130,7 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <div className="rounded-xl p-8 border" style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.08)' }}>
+        <div className="glass-card p-8">
           <form onSubmit={handleSubmit} noValidate>
             <div className="flex flex-col gap-5">
               <div>

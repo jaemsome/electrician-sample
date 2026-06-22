@@ -1,4 +1,5 @@
 import SwitchboardSvg from './SwitchboardSvg';
+import Lightning from './Lightning';
 
 const trustPoints = [
   { icon: 'verified', text: 'Licensed & Insured' },
@@ -10,20 +11,35 @@ const trustPoints = [
 export default function HeroSection() {
   return (
     <section
-      className="hero-pattern py-20 md:py-28 px-4 md:px-8 relative overflow-hidden"
+      className="hero-pattern py-24 md:py-32 px-4 md:px-8 relative overflow-hidden"
       style={{ backgroundColor: 'var(--color-dark-navy)' }}
     >
-      <div className="max-w-container mx-auto grid md:grid-cols-2 items-center gap-12">
+      <div className="mesh-bg" aria-hidden="true" />
+      <Lightning
+        className="absolute inset-0 w-full h-full hidden md:block"
+        hue={48}
+        xOffset={-0.6}
+        speed={1.1}
+        intensity={0.55}
+        size={1.6}
+      />
+
+      <div className="max-w-container mx-auto grid md:grid-cols-2 items-center gap-12 relative">
         <div className="flex flex-col gap-6">
           <span
-            className="inline-block px-3 py-1 rounded text-xs font-bold uppercase tracking-widest w-fit"
-            style={{ background: 'rgba(255, 215, 0, 0.15)', color: 'var(--color-yellow)' }}
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest w-fit border"
+            style={{
+              background: 'rgba(255, 215, 0, 0.1)',
+              borderColor: 'rgba(255, 215, 0, 0.25)',
+              color: 'var(--color-yellow)',
+            }}
           >
-            Parramatta&#39;s #1 Rated Electrician ⚡
+            <span className="material-symbols-outlined icon-filled pulsing-bolt text-sm" aria-hidden="true">bolt</span>
+            Parramatta&#39;s #1 Rated Electrician
           </span>
 
-          <h1 className="text-4xl md:text-5xl font-black leading-tight text-white hero-headline">
-            Trusted <span style={{ color: 'var(--color-yellow)' }}>Licensed</span>
+          <h1 className="text-4xl md:text-6xl font-bold font-heading leading-[1.1] text-white hero-headline">
+            Trusted <span className="glow-text" style={{ color: 'var(--color-yellow)' }}>Licensed</span>
             <br />Electrician in<br />Parramatta, NSW
           </h1>
 

@@ -6,6 +6,10 @@ module.exports = {
       maxWidth: {
         container: '1280px',
       },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'sans-serif'],
+        heading: ['var(--font-space-grotesk)', 'sans-serif'],
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],

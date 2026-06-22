@@ -35,12 +35,12 @@ function StarRating({ count = 5, size = 'text-lg', label }) {
 
 function TestimonialCard({ text, author, location }) {
   return (
-    <div className="testimonial-card bg-white border border-gray-200 rounded-xl p-8">
+    <div className="testimonial-card glass-card-light p-8 cursor-default">
       <StarRating />
       <p className="italic text-sm leading-relaxed mb-6 mt-4" style={{ color: 'var(--color-muted)' }}>
         {text}
       </p>
-      <div className="text-sm font-black">{author}</div>
+      <div className="text-sm font-bold font-heading">{author}</div>
       <div className="text-xs mt-1" style={{ color: 'var(--color-muted)' }}>
         {location}
       </div>
@@ -50,10 +50,10 @@ function TestimonialCard({ text, author, location }) {
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 px-4 md:px-8 bg-white">
+    <section className="dot-grid-bg py-20 px-4 md:px-8">
       <div className="max-w-container mx-auto">
         <div className="section-title text-center">
-          <h2 className="text-3xl font-black underline-accent-center">What Our Customers Say</h2>
+          <h2 className="text-3xl font-bold font-heading underline-accent-center">What Our Customers Say</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
@@ -62,7 +62,7 @@ export default function TestimonialsSection() {
         </div>
         <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
           <StarRating size="text-2xl" label="Overall rating: 4.9 out of 5 stars" />
-          <span className="text-xl font-black">4.9 / 5</span>
+          <span className="text-xl font-bold font-heading">4.9 / 5</span>
           <span className="text-sm" style={{ color: 'var(--color-muted)' }}>
             Based on 147 Google Reviews
           </span>
