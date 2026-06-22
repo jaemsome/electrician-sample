@@ -1,4 +1,5 @@
-import AboutSvg from './AboutSvg';
+import Image from 'next/image';
+import aboutPhoto from '@/assets/images/about-electrician.jpg';
 
 const checkPoints = [
   'Australian owned and locally operated since 2008',
@@ -65,7 +66,14 @@ export default function AboutSection() {
             className="img-placeholder border"
             style={{ height: '420px', borderColor: 'rgba(255, 215, 0, 0.2)' }}
           >
-            <AboutSvg />
+            <Image
+              src={aboutPhoto}
+              alt="Electrician's gloved hand wiring a junction box"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority={false}
+            />
             <div
               className="absolute bottom-0 left-0 right-0 p-5 border-t"
               style={{
