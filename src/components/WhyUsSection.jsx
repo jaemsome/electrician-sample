@@ -23,8 +23,8 @@ const reasons = [
 
 function WhyCard({ icon, title, description }) {
   return (
-    <div className="bg-white rounded-lg p-8 text-center shadow-sm">
-      <div className="why-icon">
+    <div className="glass-card-light p-8 text-center cursor-default">
+      <div className="icon-orb mx-auto mb-4">
         <span
           className="material-symbols-outlined icon-filled text-3xl"
           style={{ color: 'var(--color-yellow)' }}
@@ -33,7 +33,7 @@ function WhyCard({ icon, title, description }) {
           {icon}
         </span>
       </div>
-      <h4 className="font-black text-base mb-2">{title}</h4>
+      <h4 className="font-bold font-heading text-base mb-2">{title}</h4>
       <p className="text-sm" style={{ color: 'var(--color-muted)' }}>
         {description}
       </p>
@@ -45,12 +45,12 @@ export default function WhyUsSection() {
   return (
     <section
       id="why-us"
-      className="py-20 px-4 md:px-8"
+      className="dot-grid-bg py-20 px-4 md:px-8"
       style={{ background: 'var(--color-section-grey)' }}
     >
       <div className="max-w-container mx-auto">
         <div className="section-title text-center">
-          <h2 className="text-3xl font-black underline-accent-center">
+          <h2 className="text-3xl font-bold font-heading underline-accent-center">
             Why Parramatta Locals Choose Volt Electrics
           </h2>
         </div>

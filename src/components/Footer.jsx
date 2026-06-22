@@ -20,7 +20,7 @@ export default function Footer() {
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
 					<div>
 						<div
-							className="text-xl font-black mb-1"
+							className="text-xl font-bold font-heading mb-1"
 							style={{ color: "var(--color-yellow)" }}
 						>
 							⚡ VOLT ELECTRICS
@@ -66,7 +66,7 @@ export default function Footer() {
 						<div className="flex flex-col gap-3">
 							<a
 								href="tel:0291234567"
-								className="text-base font-black hover:opacity-80 transition-opacity"
+								className="text-base font-bold font-heading hover:opacity-80 transition-opacity"
 								style={{ color: "var(--color-yellow)" }}
 							>
 								(02) 9123 4567

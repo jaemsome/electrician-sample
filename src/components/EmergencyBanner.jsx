@@ -1,6 +1,12 @@
 export default function EmergencyBanner() {
   return (
-    <div style={{ background: 'var(--color-red)' }} className="py-4 px-4">
+    <div
+      className="py-4 px-4 border-y"
+      style={{
+        background: 'linear-gradient(90deg, var(--color-red), #dc2626)',
+        borderColor: 'rgba(255, 255, 255, 0.15)',
+      }}
+    >
       <div className="max-w-container mx-auto flex items-center justify-center gap-3 text-center flex-wrap">
         <span className="material-symbols-outlined icon-filled pulsing-bolt text-white text-2xl" aria-hidden="true">
           bolt
