@@ -45,15 +45,17 @@ const services = [
 
 function ServiceCard({ icon, iconColor, title, description }) {
   return (
-    <div className="service-card bg-white p-8 rounded-lg border border-gray-200">
-      <span
-        className="material-symbols-outlined icon-filled text-4xl mb-4 block"
-        style={{ color: iconColor }}
-        aria-hidden="true"
-      >
-        {icon}
-      </span>
-      <h3 className="text-lg font-black mb-2">{title}</h3>
+    <div className="service-card glass-card-light p-8 cursor-default">
+      <div className="icon-orb mb-5">
+        <span
+          className="material-symbols-outlined icon-filled text-3xl"
+          style={{ color: iconColor }}
+          aria-hidden="true"
+        >
+          {icon}
+        </span>
+      </div>
+      <h3 className="text-lg font-bold font-heading mb-2">{title}</h3>
       <p className="text-sm leading-relaxed" style={{ color: 'var(--color-muted)' }}>
         {description}
       </p>
@@ -63,10 +65,10 @@ function ServiceCard({ icon, iconColor, title, description }) {
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 px-4 md:px-8 bg-white">
+    <section id="services" className="dot-grid-bg py-20 px-4 md:px-8">
       <div className="max-w-container mx-auto">
         <div className="section-title">
-          <h2 className="text-3xl font-black underline-accent-left">Our Electrical Services</h2>
+          <h2 className="text-3xl font-bold font-heading underline-accent-left">Our Electrical Services</h2>
           <p className="mt-6 text-base" style={{ color: 'var(--color-muted)' }}>
             Residential and commercial electrical work done right, the first time.
           </p>

@@ -12,7 +12,7 @@ export default function AboutSection() {
     <section id="about" className="py-20 px-4 md:px-8 bg-white">
       <div className="max-w-container mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl font-black underline-accent-left mb-8">About Volt Electrics</h2>
+          <h2 className="text-3xl font-bold font-heading underline-accent-left mb-8">About Volt Electrics</h2>
 
           <div className="flex items-center gap-6 mb-8">
             <div className="years-badge">
@@ -61,11 +61,18 @@ export default function AboutSection() {
         </div>
 
         <div>
-          <div className="img-placeholder" style={{ height: '420px' }}>
+          <div
+            className="img-placeholder border"
+            style={{ height: '420px', borderColor: 'rgba(255, 215, 0, 0.2)' }}
+          >
             <AboutSvg />
             <div
-              className="absolute bottom-0 left-0 right-0 p-5"
-              style={{ background: 'rgba(255, 215, 0, 0.08)', backdropFilter: 'blur(8px)' }}
+              className="absolute bottom-0 left-0 right-0 p-5 border-t"
+              style={{
+                background: 'rgba(255, 215, 0, 0.08)',
+                backdropFilter: 'blur(8px)',
+                borderColor: 'rgba(255, 215, 0, 0.15)',
+              }}
             >
               <p className="text-white text-sm font-bold italic text-center">
                 &ldquo;We treat every home as if it were our own.&rdquo; — James Hartley, Founder

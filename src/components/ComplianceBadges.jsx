@@ -6,7 +6,7 @@ const badges = [
 
 function ComplianceBadge({ icon, label, value }) {
   return (
-    <div className="compliance-badge">
+    <div className="compliance-badge glass-card">
       <span
         className="material-symbols-outlined icon-filled text-2xl mb-2 block"
         style={{ color: 'var(--color-yellow)' }}
@@ -15,7 +15,7 @@ function ComplianceBadge({ icon, label, value }) {
         {icon}
       </span>
       <div className="text-xs font-bold uppercase tracking-widest text-white mb-1">{label}</div>
-      <div className="text-lg font-black" style={{ color: 'var(--color-yellow)' }}>
+      <div className="text-lg font-bold font-heading" style={{ color: 'var(--color-yellow)' }}>
         {value}
       </div>
     </div>
@@ -24,9 +24,10 @@ function ComplianceBadge({ icon, label, value }) {
 
 export default function ComplianceBadges() {
   return (
-    <section className="py-16 px-4 md:px-8" style={{ background: 'var(--color-dark-navy)' }}>
-      <div className="max-w-container mx-auto text-center">
-        <h2 className="text-2xl font-black text-white mb-2">
+    <section className="relative py-16 px-4 md:px-8 overflow-hidden" style={{ background: 'var(--color-dark-navy)' }}>
+      <div className="mesh-bg" aria-hidden="true" />
+      <div className="max-w-container mx-auto text-center relative">
+        <h2 className="text-2xl font-bold font-heading text-white mb-2">
           Licensed.{' '}
           <span style={{ color: 'var(--color-yellow)' }}>Compliant.</span>{' '}
           Guaranteed.
